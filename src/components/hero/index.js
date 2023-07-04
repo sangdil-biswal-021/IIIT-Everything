@@ -1,11 +1,23 @@
 import React from 'react';
+import Lottie from '../../images/tempLottie.png';
+// import Lottie from 'react-lottie';
+import { ReactComponent as Arrow } from '../../svg/rightArrow.svg';
 import './index.module.css';
 import styles from './index.module.css';
 
 const Hero = () => {
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice',
+  //   },
+  // };
+
   return (
-    <div className=" py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className=" flex max-w-[95vw] items-center justify-between ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <h1 className="text-4xl text-white font-bold">
           <span className={styles.gradientText}>Your one-stop</span>
           &nbsp; destination <br></br>
@@ -19,9 +31,23 @@ const Hero = () => {
           <br></br> knowledge, making it easier than ever to excel in your
           studies.
         </p>
-        <button className="bg-white text-txtPurple hover:bg-txtPurple hover:text-white px-6 py-2 rounded-md mt-6 font-medium">
-          BROWSE RESOURCES
-        </button>
+        <div className="flex items-center mt-6">
+          <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-8 py-4  rounded-3xl text-sm   font-bold transition duration-900">
+            BROWSE RESOURCES
+          </button>
+          <div>
+            <Arrow />
+          </div>
+        </div>
+      </div>
+      <div className="w-1/2 h-1/2 ">
+        <img
+          className="pb-20"
+          style={{ width: 'auto', height: '80vh' }}
+          src={Lottie}
+          alt="img"
+        />
+        {/* <Lottie options={defaultOptions} /> */}
       </div>
     </div>
   );
