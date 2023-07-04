@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="flex">
               <a
                 href="/"
-                className="text-purple-900 bg-gradient-to-r from-purple-400 to-purple-300  to-purple-100 hover:text-white px-8 py-4 ml-8 rounded-3xl text-sm   font-bold "
+                className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-8 py-4 ml-8 rounded-3xl text-sm   font-bold transition duration-900"
               >
                 CONTACT US
               </a>
