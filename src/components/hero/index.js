@@ -35,7 +35,7 @@ const Hero = () => {
           <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-8 py-4  rounded-3xl text-sm   font-bold transition duration-900">
             BROWSE RESOURCES
           </button>
-          <div>
+          <div className={styles.animation}>
             <Arrow />
           </div>
         </div>
