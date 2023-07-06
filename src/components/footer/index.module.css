@@ -1,0 +1,31 @@
+.gradientText {
+  background: linear-gradient(to left, #8176af, #c0b7e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes translateAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0px;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100px;
+  }
+}
+
+.animation {
+  animation: translateAnimation 4s infinite;
+  animation-delay: 2s;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/footer';
 import NavBar from './components/navbar';
 import LoadingSpinner from './components/spinner/LoadingSpinner';
 import BrowseResourcePage from './pages/BrowseResourcePage';
@@ -27,6 +28,7 @@ function App() {
               <Route path="/browse" element={<BrowseResourcePage />} />
             </Routes>
           </Router>
+          <Footer />
         </div>
       )}
     </>
