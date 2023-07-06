@@ -42,8 +42,8 @@ const Hero = () => {
       </div>
       <div className="w-1/2 h-1/2 ">
         <img
-          className="pb-20"
-          style={{ width: 'auto', height: '80vh' }}
+          className="pb-20 translate-x-28"
+          style={{ width: 'auto', height: '80vh', scale: '1.4' }}
           src={Lottie}
           alt="img"
         />

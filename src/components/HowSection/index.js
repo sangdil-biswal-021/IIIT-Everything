@@ -4,11 +4,11 @@ import './index.module.css';
 
 const How = () => {
   return (
-    <div className=" flex max-w-[95vw] mt-4 mb-4 ">
+    <div className=" flex max-w-[95vw] mt-32 mb-4 ">
       <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 ">
         <h1 className="text-4xl text-white font-bold">HOW TO USE</h1>
 
-        <div className="flex items-center  text-white font-thin font-mono text-4xl">
+        <div className="flex items-center pointer-events-none  text-white font-thin font-mono text-4xl">
           THE WEBSITE
           <div
             // className={styles.animation}
