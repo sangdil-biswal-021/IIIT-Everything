@@ -16,10 +16,10 @@ export default function HomePage() {
     <>
       <div className="ml-64  ">
         {/* L1 position to be changed when lottie is added */}
-        <L1 className="absolute z-[-1] right-0 " />
+        <L1 className="absolute z-[-1] right-0 pointer-events-none " />
 
-        <L2 className="absolute z-[-1] right-32 top-0 " />
-        <L3 className="absolute z-[-1] right-0 translate-y-60" />
+        <L2 className="absolute z-[-1] right-32 top-0 pointer-events-none" />
+        <L3 className="absolute z-[-1] right-0 translate-y-60 pointer-events-none" />
       </div>
       <LeftSpine className="absolute" />
       <Hero />

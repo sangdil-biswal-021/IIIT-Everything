@@ -40,9 +40,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/2 h-1/2 ">
+      <div className="w-1/2 h-1/2 pointer-events-none">
         <img
-          className="pb-20 translate-x-28"
+          className="pb-20 translate-x-28 pointer-events-none"
           style={{ width: 'auto', height: '80vh', scale: '1.4' }}
           src={Lottie}
           alt="img"
