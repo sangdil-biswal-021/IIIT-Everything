@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext ,useState, useEffect} from 'react';
 // import styles from "./index.module.css";
 import How from '../../components/HowSection';
 import Hero from '../../components/hero';
@@ -8,10 +8,11 @@ import { ReactComponent as L2 } from '../../svg/lottieSpine2.svg';
 import { ReactComponent as L3 } from '../../svg/lottieSpine3.svg';
 
 export default function HomePage() {
-  // const [isVisible, setIsVisible] = useState(false);
-  // useEffect(() => {
-  //   setIsVisible(true); // Set isVisible to true to trigger the animation
-  // }, []);
+  
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true); // Set isVisible to true to trigger the animation
+  }, []);
   return (
     <>
       <div className="ml-64  ">

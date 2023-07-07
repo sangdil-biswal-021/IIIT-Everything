@@ -6,9 +6,11 @@ import NavBar from './components/navbar';
 import LoadingSpinner from './components/spinner/LoadingSpinner';
 import BrowseResourcePage from './pages/BrowseResourcePage';
 import HomePage from './pages/Homepage';
+import TrialInput from './components/TrialInputs';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,6 +28,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/browse" element={<BrowseResourcePage />} />
+              <Route path='/trial' element={<TrialInput/>}/>
             </Routes>
           </Router>
           <Footer />
