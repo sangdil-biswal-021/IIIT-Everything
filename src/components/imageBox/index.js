@@ -12,7 +12,7 @@ const ImageBox = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-8">
         <div
           className="image-box w-[90vw]  rounded-full h-[300px] relative bg-cover bg-center bg-no-repeat "
           style={{ backgroundImage: `url(${buildingImg})` }}
@@ -27,8 +27,11 @@ const ImageBox = () => {
                 Here you will get all the Notes, PYQs and Books.
               </div>
             </div>
-            <div className="w-[70px] h-[70px] left-[50%] bottom-[-30px] translate-x-[-50%] absolute rounded-[50%] bg-slate-400 cursor-pointer flex items-center justify-center">
-              <button className="scroll-button " onClick={handleButtonClick}>
+            <div className=" darkei w-[80px] h-[80px] left-[50%] bottom-[-30px] translate-x-[-50%]  absolute rounded-[50%]  cursor-pointer flex items-center justify-center">
+              <button
+                className="scroll-button bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo"
+                onClick={handleButtonClick}
+              >
                 <DownArrow />
               </button>
             </div>
