@@ -20,7 +20,7 @@ const Navbar = () => {
                 HOME
               </a>
               <a
-                href="/"
+                href="/browse"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 BROWSE RESOURCES
