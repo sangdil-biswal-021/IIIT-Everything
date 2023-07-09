@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import TrialInput from './components/TrialInputs';
 import Footer from './components/footer';
@@ -23,13 +23,11 @@ function App() {
       ) : (
         <div>
           <NavBar />
-          <Router>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/browse" element={<BrowseResourcePage />} />
               <Route path="/trial" element={<TrialInput />} />
             </Routes>
-          </Router>
           <Footer />
         </div>
       )}

@@ -1,30 +1,29 @@
 import React from 'react';
 import Logo from '../../images/Logo.png';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="bg-gray-000">
       <div className="xl:w-[89vw]  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-32">
           <div className="flex items-center">
-            <a href="/" className=" w-48">
+            <Link link to="/trail" className=" w-48">
               <img src={Logo} alt="Example" />
-            </a>
+            </Link>
           </div>
           <div className="flex items-center ">
             <div className="flex">
-              <a
-                href="/"
+              <Link link to='/'
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 HOME
-              </a>
-              <a
-                href="/browse"
+              </Link>
+              <Link
+                link to="/browse"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 BROWSE RESOURCES
-              </a>
+              </Link>
               <a
                 href="/"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
