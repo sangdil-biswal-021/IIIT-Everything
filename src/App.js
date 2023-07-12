@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import TrialInput from './components/TrialInputs';
 import Footer from './components/footer';
@@ -7,6 +7,7 @@ import NavBar from './components/navbar';
 import LoadingSpinner from './components/spinner/LoadingSpinner';
 import BrowseResourcePage from './pages/BrowseResourcePage';
 import HomePage from './pages/Homepage';
+import UploadDoc from './pages/UploadDocuments';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +24,12 @@ function App() {
       ) : (
         <div>
           <NavBar />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/browse" element={<BrowseResourcePage />} />
-              <Route path="/trial" element={<TrialInput />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/browse" element={<BrowseResourcePage />} />
+            <Route path="/upload" element={<UploadDoc />} />
+            <Route path="/trial" element={<TrialInput />} />
+          </Routes>
           <Footer />
         </div>
       )}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from '../../images/tempLottie.png';
 // import Lottie from 'react-lottie';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Arrow } from '../../svg/rightArrow.svg';
 import './index.module.css';
 import styles from './index.module.css';
@@ -32,9 +33,11 @@ const Hero = () => {
           studies.
         </p>
         <div className="flex items-center mt-6">
-          <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-8 py-4  rounded-3xl text-sm   font-bold transition duration-900">
-            BROWSE RESOURCES
-          </button>
+          <Link link to="/browse">
+            <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-8 py-4  rounded-3xl text-sm   font-bold transition duration-900">
+              BROWSE RESOURCES
+            </button>
+          </Link>
           <div className={styles.animation}>
             <Arrow />
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../../images/Logo.png';
 import { Link } from 'react-router-dom';
+import Logo from '../../images/Logo.png';
 const Navbar = () => {
   return (
     <nav className="bg-gray-000">
@@ -13,23 +13,26 @@ const Navbar = () => {
           </div>
           <div className="flex items-center ">
             <div className="flex">
-              <Link link to='/'
+              <Link
+                link
+                to="/"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 HOME
               </Link>
               <Link
-                link to="/browse"
+                link
+                to="/browse"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 BROWSE RESOURCES
               </Link>
-              <a
-                href="/"
+              <Link
+                to="/upload"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
               >
                 UPLOAD DOCUMENTS
-              </a>
+              </Link>
               <a
                 href="/"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"

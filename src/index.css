@@ -8,3 +8,6 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+.radialGrade {
+  background-image: radial-gradient(ellipse, #403a5f 5%, #211e2e 70%);
+}
