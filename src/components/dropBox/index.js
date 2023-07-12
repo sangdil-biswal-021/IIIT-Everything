@@ -39,8 +39,8 @@ const DropBox = () => {
           onDrop={handleDrop}
         >
           <Cloud />
-          <h1 className=" cursor-default"> Drag & Drop</h1>
-          <h1 className=" cursor-default">Or</h1>
+          <h1 className=" cursor-default text-white"> Drag & Drop</h1>
+          <h1 className=" cursor-default text-white">Or</h1>
           <input
             type="file"
             multiple

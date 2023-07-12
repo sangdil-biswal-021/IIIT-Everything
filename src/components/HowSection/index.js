@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 import { ReactComponent as ArrowLong } from '../../svg/ArrowLong.svg';
 import './index.module.css';
 
@@ -6,7 +8,21 @@ const How = () => {
   return (
     <div className=" flex max-w-[95vw] mt-32 mb-4 ">
       <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 ">
-        <h1 className="text-4xl text-white font-bold">HOW TO USE</h1>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+              ref={ref}
+              initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+              animate={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+              }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <h1 className="text-4xl text-white font-bold">HOW TO USE</h1>
+            </motion.div>
+          )}
+        </InView>
 
         <div className="flex items-center pointer-events-none  text-white font-thin font-mono text-4xl">
           THE WEBSITE
