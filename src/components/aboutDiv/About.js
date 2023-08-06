@@ -4,7 +4,7 @@ import { ReactComponent as DownArrow } from '../../svg/arrowDown.svg';
 import { ReactComponent as Image } from "../../svg/about.svg";
 import { ReactComponent as Arrow } from "../../svg/ArrowLong.svg";
 import { ReactComponent as ArrowRight } from "../../svg/rightArrow.svg";
-
+import vector from '../../images/vector.png'
 import img from '../../images/buildingsIIIT.png'
 import anirudh from '../../images/anirudh.jpeg'
 import kaniskaa from '../../images/kaniskaa.jpeg'
@@ -49,17 +49,17 @@ export default function About() {
     <div className="flex justify-center flex-col items-center mt-8">
      <div className='flex'>
         <div className='w-1/2 flex flex-col p-5 m-5 text-mono text-white'>
-            <text className='font-bold text-[36px]'>ABOUT</text>
-            <text className='font-thin text-[36px]'>THE CREATORS</text>
-            <text className='text-[16px] mt-2 leading-7' >Lorem ipsum dolor sit amet consectetur. Scelerisque enim magna mattis nisl varius. Sed mollis consectetur at at rhoncus mi rhoncus vitae. Eget quis in duis senectus blandit facilisi laoreet. Lorem vel pellentesque ac vel venenatis quis nunc nibh. Neque vel vivamus massa aliquet tortor aliquet sed. Risus lacinia condimentum egestas lectus facilisis. Euismod odio amet sit mi est adipiscing lectus nec. Lacus ornare id facilisi volutpat orci nulla scelerisque curabitur. Sed lorem pellentesque porta dolor sed habitant molestie turpis.</text>
+            <text className='font-bold text-[30px]'>ABOUT</text>
+            <text className='font-thin text-[30px]'>THE CREATORS</text>
+            <text className='text-[14px] mt-2 leading-7' >Lorem ipsum dolor sit amet consectetur. Scelerisque enim magna mattis nisl varius. Sed mollis consectetur at at rhoncus mi rhoncus vitae. Eget quis in duis senectus blandit facilisi laoreet. Lorem vel pellentesque ac vel venenatis quis nunc nibh. Neque vel vivamus massa aliquet tortor aliquet sed. Risus lacinia condimentum egestas lectus facilisis. Euismod odio amet sit mi est adipiscing lectus nec. Lacus ornare id facilisi volutpat orci nulla scelerisque curabitur. Sed lorem pellentesque porta dolor sed habitant molestie turpis.</text>
         </div>
         <div><Image/></div>
      </div>
-     <div className='flex flex-col font-mono text-white mx-10'>
-        <div className='flex flex-col text-[36px]'>
+     <div className='flex flex-col font-mono text-white mx-10 bg-no-repeat bg-contain' style={{backgroundImage:`url(${vector})`}}>
+        <div className='flex flex-col text-[30px]' >
             <text className='-mb-[30px] font-thin'>THE</text>
             <text className='flex items-center mr-2 font-bold'>DEVELOPERS<div className='ml-10'><Arrow/></div></text>
-            </div>
+        </div>
         <div className='mt-10 grid grid-cols-4 gap-2 '>
            {
             data.map((e)=>
@@ -72,7 +72,7 @@ export default function About() {
         </div>
      </div>
      <div className='flex flex-col font-mono text-white mx-10 mt-5'>
-        <div className='flex flex-col text-[36px]'>
+        <div className='flex flex-col text-[30px]' >
             <text className='-mb-[30px] font-thin'>THE</text>
             <text className='flex items-center mr-2 font-bold'>CONTRIBUTORS<div className='ml-10'><Arrow/></div></text>
             </div>
