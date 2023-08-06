@@ -8,6 +8,7 @@ import { ReactComponent as LeftSpine } from '../../svg/leftSpine.svg';
 // import { ReactComponent as SpikeHead } from '../../svg/spikehead.svg';
 
 export default function UploadDoc() {
+  const para = 'This page is solely for admins and Editors with access.';
   return (
     <>
       <div className="ml-64  ">
@@ -16,7 +17,7 @@ export default function UploadDoc() {
       <LeftSpine className="absolute pointer-events-none" />
 
       {/* <div className=""> BrowseResourcePage</div> */}
-      <ImageBox />
+      <ImageBox HeadTxt={'Upload Documents'} paraTxt={para} />
       {/* <TrialInput /> */}
       <DropBox />
     </>

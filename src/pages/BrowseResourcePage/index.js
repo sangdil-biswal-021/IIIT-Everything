@@ -7,6 +7,7 @@ import { ReactComponent as LeftSpine } from '../../svg/leftSpine.svg';
 import { ReactComponent as SpikeHead } from '../../svg/spikehead.svg';
 
 export default function BrowseResourcePage() {
+  const para = 'Here you will get all the Notes, PYQs and Books.';
   return (
     <>
       <div className="ml-64  ">
@@ -15,7 +16,7 @@ export default function BrowseResourcePage() {
       <LeftSpine className="absolute" />
 
       {/* <div className=""> BrowseResourcePage</div> */}
-      <ImageBox />
+      <ImageBox HeadTxt={'Browse Documents'} paraTxt={para} />
       <TrialInput />
     </>
   );

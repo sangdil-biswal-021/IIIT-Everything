@@ -3,8 +3,9 @@ import buildingImg from '../../images/buildingsIIIT.png';
 import { ReactComponent as DownArrow } from '../../svg/arrowDown.svg';
 import './imageBox.css';
 
-const ImageBox = () => {
+const ImageBox = (props) => {
   const scrollRef = useRef();
+  const { HeadTxt, paraTxt } = props;
 
   const handleButtonClick = () => {
     scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -20,12 +21,8 @@ const ImageBox = () => {
           <div class="absolute inset-0 transform transition-transform duration-300 hover:scale-">
             {/* <img src={buildingImg} alt="Image" className="image rounded-full" /> */}
             <div className="  h-[300px]  flex flex-col items-center justify-center ">
-              <div className="text-white font-bold text-5xl p-1">
-                BROWSE DOCUMENTS
-              </div>
-              <div className="text-white text-3xl font-thin p-1">
-                Here you will get all the Notes, PYQs and Books.
-              </div>
+              <div className="text-white font-bold text-5xl p-1">{HeadTxt}</div>
+              <div className="text-white text-3xl font-thin p-1">{paraTxt}</div>
             </div>
             <div className=" darkei w-[80px] h-[80px] left-[50%] bottom-[-30px] translate-x-[-50%]  absolute rounded-[50%]  cursor-pointer flex items-center justify-center">
               <button
