@@ -9,7 +9,7 @@ import styles from './index.module.css';
 const Footer = () => {
   return (
     <>
-      <div className=" flex flex-col items-center mt-32 overflow-hidden relative ">
+      <div className=" flex flex-col items-center mt-32 overflow-hidden relative pointer-events-none ">
         <Fbtm className="absolute z-[-1] translate-y-[55vh]  md:block hidden" />
         <Ftop className="absolute z-[-1] translate  md:block hidden" />
         <div className="m-8 scale-50 md:scale-100 ">
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           <div className="w-[40%] ">
-            <ul className="text-white md:text-base text-xs font-bold ">
+            <ul className="text-white md:text-base text-xs font-bold pointer-events-auto ">
               <li className="py-2">BROWSE RESOURCES</li>
               <li className="py-2">UPLOAD DOCUMENTS</li>
               <li className="py-2"> CREATORS PAGE</li>

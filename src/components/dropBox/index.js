@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { ReactComponent as Cloud } from '../../svg/uploadIcon.svg';
 
-const DropBox = () => {
-  const [files, setFiles] = useState(null);
+const DropBox = ({ setFiles, files }) => {
+  // const [files, setFiles] = useState(null);
   const inputRef = useRef();
 
   const handleDrag = (e) => {
