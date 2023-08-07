@@ -47,7 +47,7 @@ export default function About() {
   return (
     <>
     <div className="flex justify-center flex-col items-center mt-8">
-     <div className='flex'>
+     <div className='flex flex-col md:flex-row'>
         <div className='w-1/2 flex flex-col p-5 m-5 text-mono text-white'>
             <text className='font-bold text-[30px]'>ABOUT</text>
             <text className='font-thin text-[30px]'>THE CREATORS</text>
@@ -60,7 +60,7 @@ export default function About() {
             <text className='-mb-[30px] font-thin'>THE</text>
             <text className='flex items-center mr-2 font-bold'>DEVELOPERS<div className='ml-10'><Arrow/></div></text>
         </div>
-        <div className='mt-10 grid grid-cols-4 gap-2 '>
+        <div className='mt-10 grid grid-cols-2 gap-2 md:grid-cols-4'>
            {
             data.map((e)=>
             <>

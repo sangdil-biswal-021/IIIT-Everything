@@ -14,9 +14,12 @@ export default function Developers(props) {
         <div className='text-[18px] font-bold text-center' >{props.name}</div>
         <Partition/>
         <div className='text-[12px] text-center'>{props.about}</div>
-        <a href={`${props.linkedin}`}><button className='h-[50px] w-[155px] bg-no-repeat' style={{backgroundImage:`url(${img1})`}}>
-            <text className='text-black'>Linkedin</text>
-       </button> </a>
+        <a href={`${props.linkedin}`}> <button
+            className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-24 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center"
+           
+          >
+            LinkedIn
+          </button> </a>
      
     </div>
   )
