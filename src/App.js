@@ -8,6 +8,7 @@ import LoadingSpinner from './components/spinner/LoadingSpinner';
 import BrowseResourcePage from './pages/BrowseResourcePage';
 import HomePage from './pages/Homepage';
 import UploadDoc from './pages/UploadDocuments';
+import CreatorsPage from './pages/CreatorsPage/CreatorsPage';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
             <Route path="/browse" element={<BrowseResourcePage />} />
             <Route path="/upload" element={<UploadDoc />} />
             <Route path="/trial" element={<TrialInput />} />
+            <Route path="/creator" element={<CreatorsPage/>}/>
           </Routes>
           <Footer />
         </div>
