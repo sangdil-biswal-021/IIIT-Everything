@@ -11,7 +11,7 @@ export default function Developers(props) {
         
         </div>
         </div>
-        <div className='text-[20px] font-bold text-center' >{props.name}</div>
+        <div className='text-[18px] font-bold text-center' >{props.name}</div>
         <Partition/>
         <div className='text-[12px] text-center'>{props.about}</div>
         <a href={`${props.linkedin}`}><button className='h-[50px] w-[155px] bg-no-repeat' style={{backgroundImage:`url(${img1})`}}>

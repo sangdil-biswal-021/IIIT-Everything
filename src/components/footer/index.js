@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className=" w-[90vw]  flex items-center justify-evenly">
           <div className="w-[40%] ">
-            <h1 className="md:text-7xl text-5xl text-white font-bold pointer-events-none overflow-hidden">
+            <h1 className="md:text-5xl text-3xl text-white font-bold pointer-events-none overflow-hidden">
               <span className={styles.gradientText}>
                 IIIT <br></br>EVERYTHING
               </span>
