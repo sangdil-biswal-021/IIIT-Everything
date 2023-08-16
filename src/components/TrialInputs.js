@@ -4,7 +4,7 @@ import img from '../images/radial-rectangle.png';
 import Download from '../svg/Download';
 import Line from '../svg/Line';
 import ShareLinkComponent from './ShareLink';
-import './generalStyles.module.css'
+import './generalStyles.module.css';
 const SelectInput = ({ label, options, value, onChange }) => (
   <div className=" bg-transparent w-[560px] flex flex-col">
     <label

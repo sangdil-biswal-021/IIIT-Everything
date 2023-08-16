@@ -21,10 +21,10 @@ const ImageBox = (props) => {
           <div class="absolute inset-0 transform transition-transform duration-300 hover:scale-">
             {/* <img src={buildingImg} alt="Image" className="image rounded-full" /> */}
             <div className="  sm:h-[300px] h-[200px]  flex flex-col items-center justify-center ">
-              <div className="text-white font-bold text-3xl md:text-5xl p-1">
+              <div className="text-white font-bold text-2xl sm:text-3xl md:text-5xl p-1">
                 {HeadTxt}
               </div>
-              <div className="text-white sm:text-xl md:text-3xl font-thin p-1 text-center">
+              <div className="text-white text-xs sm:text-xl md:text-3xl font-thin p-1 text-center">
                 {paraTxt}
               </div>
             </div>

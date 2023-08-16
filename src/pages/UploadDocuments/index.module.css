@@ -24,8 +24,35 @@
     opacity: 100px;
   }
 }
+@keyframes translateAnimationSm {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0px;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100px;
+  }
+}
 
 .animation {
   animation: translateAnimation 4s infinite;
   animation-delay: 2s;
+  pointer-events: none;
+}
+.animationSm {
+  animation: translateAnimationSm 4s infinite;
+  animation-delay: 2s;
+  pointer-events: none;
 }

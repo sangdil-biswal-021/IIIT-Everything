@@ -34,7 +34,7 @@ const DropBox = ({ setFiles, files }) => {
     <>
       <div className="">
         <div
-          className=" h-[70vh]  mx-16 md:mx-32 flex  radialGrade flex-col justify-center items-center border-0 rounded-3xl  text-xl"
+          className=" md:h-[70vh] h-[40vh]  mx-16 md:mx-32 flex  radialGrade flex-col justify-center items-center border-0 rounded-3xl  text-xl"
           onDragOver={handleDrag}
           onDrop={handleDrop}
         >

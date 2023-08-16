@@ -273,28 +273,34 @@ export default function UploadDoc() {
         </button>
       </section>
 
-      <section className="mb-8 flex justify-between  pt-16 px-32 pr-72 ">
-        <div className="flex flex-col">
-          <div className="flex gap-4">
+      <section className="sm:mb-8 -mb-24 flex justify-between w-[100v]  md:pt-16 md:px-32 px-4 pr-72 overflow-hidden">
+        <div className="flex flex-col  sm:w-auto w-[60vw]">
+          <div className="flex md:flex-row flex-col gap-4">
             <div>
-              <h1 className="text-5xl text-white font-light">MANAGE</h1>
-              <h1 className="text-5xl text-white font-bold">ADMIN</h1>
+              <h1 className="text-4xl md:text-5xl text-white font-light">
+                MANAGE
+              </h1>
+              <h1 className="text-4xl md:text-5xl text-white font-bold">
+                ADMIN
+              </h1>
             </div>
-            <div className={styles.animation}>
-              <Arrow />
+            <div
+              className={`md:${styles.animation} ${styles.animationSm}   md:scale-100 scale-50`}
+            >
+              <Arrow className=" md:scale-100 scale-50 sm:ml-0 -ml-12" />
             </div>
           </div>
-          <Lottie2 />
+          <Lottie2 className="md:scale-100 scale-75 md:ml-0 -ml-10  " />
         </div>
         <div className="flex flex-col  gap-8 mt-8 ">
           <button
-            className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-24 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center"
+            className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-4 sm:px-24   py-4  rounded-3xl  text-xs lg:text-base   font-bold transition duration-900 text-center whitespace-nowrap"
             onClick={handleAddAdmin}
           >
             ADD ADMIN
           </button>
           <button
-            className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-24 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center"
+            className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-4 sm:px-24 py-4  rounded-3xl lg:text-base text-xs  font-bold transition duration-900 text-center whitespace-nowrap"
             onClick={handleAddEditor}
           >
             ADD EDITOR
