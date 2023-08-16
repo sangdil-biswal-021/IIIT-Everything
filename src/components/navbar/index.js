@@ -16,26 +16,26 @@ const Navbar = () => {
               <Link
                 link
                 to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden md:block"
               >
                 HOME
               </Link>
               <Link
                 link
                 to="/browse"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden md:block"
               >
                 BROWSE RESOURCES
               </Link>
               <Link
                 to="/upload"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden md:block"
               >
                 UPLOAD DOCUMENTS
               </Link>
               <a
                 href="/creator"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden sm:block"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium hidden md:block"
               >
                 CREATERS PAGE
               </a>
@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="flex">
               <a
                 href="/"
-                className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-4 sm:px-8 py-4 ml-8 rounded-3xl text-sm   font-bold transition duration-900 text-center"
+                className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-4 sm:px-8 py-4 ml-8 rounded-3xl text-sm   font-bold transition duration-900 text-center  hidden md:block"
               >
                 CONTACT US
               </a>

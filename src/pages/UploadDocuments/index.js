@@ -83,10 +83,10 @@ export default function UploadDoc() {
     }
   };
 
-  const handleFileUpload = (event) => {
-    const uploadedFile = event.target.files[0];
-    setFile(uploadedFile);
-  };
+  // const handleFileUpload = (event) => {
+  //   const uploadedFile = event.target.files[0];
+  //   setFile(uploadedFile);
+  // };
 
   const handleSubjectChange = (event) => {
     const subjectValue = event.target.value;
@@ -186,6 +186,7 @@ export default function UploadDoc() {
       if (checkResponse.data === true) {
         const formData = new FormData();
         formData.append('file', file);
+        console.log(formData);
 
         const queryParams = {
           sub: subject,
@@ -216,6 +217,11 @@ export default function UploadDoc() {
 
   const handleUpload = async () => {
     setShowVerifyModal(true);
+
+    console.log(file.name);
+    console.log(showVerifyModal);
+
+    console.log(file);
   };
   const handleUploadClose = async () => {
     setShowVerifyModal(false);
@@ -256,7 +262,12 @@ export default function UploadDoc() {
         </div>
         <button
           onClick={handleUpload}
+          disabled={!file}
           className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l  from-customPurple mt-16 to-customIndigo  px-4 py-4  rounded-3xl text-sm   font-bold transition duration-900 text-center w-64  "
+          style={{
+            opacity: file ? 1 : 0.5,
+            cursor: !file ? 'not-allowed' : 'pointer',
+          }}
         >
           Upload
         </button>
@@ -293,49 +304,53 @@ export default function UploadDoc() {
 
       {/* Add Admin modal */}
       {isModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50 z-20">
-          <div className="bg-white p-4 rounded">
-            <h2 className="text-xl font-bold mb-2">Add Admin</h2>
-            <input
-              type="text"
-              placeholder="ID"
-              value={newAdminId}
-              onChange={handleNewAdminIdChange}
-              className="border border-gray-400 p-2 mb-2"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={newAdminPassword}
-              onChange={handleNewAdminPasswordChange}
-              className="border border-gray-400 p-2 mb-2"
-            />
-            <input
-              type="text"
-              placeholder="Name"
-              value={newAdminName}
-              onChange={handleNewAdminNameChange}
-              className="border border-gray-400 p-2 mb-2"
-            />
-            <input
-              type="password"
-              placeholder="Master Password"
-              value={masterPassword}
-              onChange={handleMasterPasswordChange}
-              className="border border-gray-400 p-2 mb-2"
-            />
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              onClick={handleSubmit}
-            >
-              Submit
-            </button>
-            <button
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-              onClick={handleModalClose}
-            >
-              Close
-            </button>
+        <div className="fixed top-0 left-0 w-full h-full  flex  items-center justify-center bg-gray-500 bg-opacity-50 z-20">
+          <div className="bg-[#302c42] p-4 rounded-3xl m-4">
+            <h2 className="text-xl text-gray-300 font-bold mb-2 text-center">
+              Add Admin
+            </h2>
+            <div className="flex flex-wrap gap-2 items-center justify-center">
+              <input
+                type="text"
+                placeholder="ID"
+                value={newAdminId}
+                onChange={handleNewAdminIdChange}
+                className="border border-gray-400 p-2 mb-2 rounded-3xl bg-slate-200 "
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={newAdminPassword}
+                onChange={handleNewAdminPasswordChange}
+                className="border border-gray-400 p-2 mb-2 rounded-3xl bg-slate-200 "
+              />
+              <input
+                type="text"
+                placeholder="Name"
+                value={newAdminName}
+                onChange={handleNewAdminNameChange}
+                className="border border-gray-400 p-2 mb-2 rounded-3xl bg-slate-200 "
+              />
+              <input
+                type="password"
+                placeholder="Master Password"
+                value={masterPassword}
+                onChange={handleMasterPasswordChange}
+                className="border border-gray-400 p-2 mb-2 rounded-3xl bg-slate-200 text-gray-900"
+              />
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4  rounded-3xl"
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
+              <button
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-3xl"
+                onClick={handleModalClose}
+              >
+                Close
+              </button>
+            </div>
             {responseMessage && (
               <p className="text-red-500 font-bold">{responseMessage}</p>
             )}
@@ -399,42 +414,43 @@ export default function UploadDoc() {
             {responseMessage && (
               <p className="text-red-500 font-bold">{responseMessage}</p>
             )}
-            {/* Verify Editor Modal */}
-            {showVerifyModal && (
-              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50">
-                <div className="bg-white p-4 rounded">
-                  <h2 className="text-xl font-bold mb-2">Verify Editor</h2>
-                  <input
-                    type="text"
-                    placeholder="Editor ID"
-                    value={editorId}
-                    onChange={handleEditorIdChange}
-                    className="border border-gray-400 p-2 mb-2"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Editor Password"
-                    value={editorPass}
-                    onChange={handleEditorPassChange}
-                    className="border border-gray-400 p-2 mb-2"
-                  />
-                  <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={handleFileUploadVerify}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={handleUploadClose}
-                  >
-                    Close
-                  </button>
-                  {responseMessage && (
-                    <p className="text-red-500 font-bold">{responseMessage}</p>
-                  )}
-                </div>
-              </div>
+          </div>
+        </div>
+      )}
+
+      {/* Verify Editor Modal */}
+      {showVerifyModal && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-50">
+          <div className="bg-white p-4 rounded">
+            <h2 className="text-xl font-bold mb-2">Verify Editor</h2>
+            <input
+              type="text"
+              placeholder="Editor ID"
+              value={editorId}
+              onChange={handleEditorIdChange}
+              className="border border-gray-400 p-2 mb-2"
+            />
+            <input
+              type="password"
+              placeholder="Editor Password"
+              value={editorPass}
+              onChange={handleEditorPassChange}
+              className="border border-gray-400 p-2 mb-2"
+            />
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={handleFileUploadVerify}
+            >
+              Submit
+            </button>
+            <button
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+              onClick={handleUploadClose}
+            >
+              Close
+            </button>
+            {responseMessage && (
+              <p className="text-red-500 font-bold">{responseMessage}</p>
             )}
           </div>
         </div>

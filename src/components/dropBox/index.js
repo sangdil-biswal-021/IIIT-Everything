@@ -10,7 +10,7 @@ const DropBox = ({ setFiles, files }) => {
   };
   const handleDrop = (e) => {
     e.preventDefault();
-    setFiles(e.dataTransfer.files);
+    setFiles(e.dataTransfer.files[0]);
     console.log(e);
   };
 
@@ -18,14 +18,14 @@ const DropBox = ({ setFiles, files }) => {
     return (
       <div className="text-center ">
         <ul className="">
-          {Array.from(files).map((file, idx) => (
-            <li
-              key={idx}
-              className="p-2 m-4 mx-8 sm:mx-32 md:mx-60  bg-customPurple rounded-2xl"
-            >
-              {file.name}
-            </li>
-          ))}
+          {/* {Array.from(files).map((file, idx) => ( */}
+          <li
+            key={files.idx}
+            className="p-2 m-4 mx-8 sm:mx-32 md:mx-60  bg-customPurple rounded-2xl"
+          >
+            {files.name}
+          </li>
+          {/* ))} */}
         </ul>
       </div>
     );
@@ -43,8 +43,7 @@ const DropBox = ({ setFiles, files }) => {
           <h1 className=" cursor-default text-white">Or</h1>
           <input
             type="file"
-            multiple
-            onChange={(event) => setFiles(event.target.files)}
+            onChange={(event) => setFiles(event.target.files[0])}
             hidden
             ref={inputRef}
           ></input>

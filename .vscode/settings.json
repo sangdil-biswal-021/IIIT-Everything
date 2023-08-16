@@ -4,5 +4,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
+  },
+  "files.associations": {
+    "*.ejs": "html",
+    "iostream": "cpp"
   }
 }
