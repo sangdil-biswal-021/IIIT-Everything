@@ -95,6 +95,7 @@ const Navbar = () => {
               <Link
                 link
                 to="/"
+                onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
               >
                 HOME
@@ -102,24 +103,28 @@ const Navbar = () => {
               <Link
                 link
                 to="/browse"
+                onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
               >
                 BROWSE RESOURCES
               </Link>
               <Link
                 to="/upload"
+                onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium"
               >
                 UPLOAD DOCUMENTS
               </Link>
               <a
                 href="/creator"
+                onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
               >
                 CREATERS PAGE
               </a>
               <a
                 href="/"
+                onClick={toggleMenu}
                 className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-8  py-4  rounded-3xl font-bold transition duration-900 text-center"
               >
                 CONTACT US
