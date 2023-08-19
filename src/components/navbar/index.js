@@ -63,18 +63,18 @@ const Navbar = () => {
               >
                 UPLOAD DOCUMENTS
               </Link>
-              <a
-                href="/creator"
+              <Link
+                to="/creator"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium"
               >
                 CREATERS PAGE
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-4 sm:px-8 py-4 ml-8 rounded-3xl text-sm font-bold transition duration-900 text-center"
               >
                 CONTACT US
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
       {
         // isOpen &&
         <div
-          className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center radialGrade bg-opacity-[.98] z-30 transition-all"
+          className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center radialGrade bg-opacity-[.98] z-30 transition-all "
           style={{
             left: isOpen ? '0vw' : '10vw',
             opacity: isOpen ? '1' : '0',
@@ -116,20 +116,20 @@ const Navbar = () => {
               >
                 UPLOAD DOCUMENTS
               </Link>
-              <a
-                href="/creator"
+              <Link
+                to="/creator"
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-lg  font-medium"
               >
                 CREATERS PAGE
-              </a>
-              <a
-                href="/"
+              </Link>
+              <Link
+                to="/"
                 onClick={toggleMenu}
                 className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-8  py-4  rounded-3xl font-bold transition duration-900 text-center"
               >
                 CONTACT US
-              </a>
+              </Link>
               <button
                 className="text-gray-300 hover:text-white px-3 py-2 z-50 transition-all  "
                 style={{

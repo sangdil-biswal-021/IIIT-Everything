@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Fbtm } from '../../svg/footerBtmSpine.svg';
 import { ReactComponent as Ftop } from '../../svg/footerTopSpine.svg';
 import { ReactComponent as Partion } from '../../svg/partition.svg';
@@ -29,18 +30,30 @@ const Footer = () => {
           </div>
 
           <div className="w-[40%] ">
-            <ul className="text-white md:text-base text-xs font-bold pointer-events-auto ">
-              <li className="py-2">BROWSE RESOURCES</li>
-              <li className="py-2">UPLOAD DOCUMENTS</li>
-              <li className="py-2"> CREATORS PAGE</li>
-              <li className="py-2">CONTACT US</li>
+            <ul className="text-white  md:text-base text-xs font-bold pointer-events-auto ">
+              <Link to="/browse" className="hover:text-gray-300">
+                {' '}
+                <li className="py-2">BROWSE RESOURCES</li>
+              </Link>
+              <Link to="/upload" className="hover:text-gray-300">
+                {' '}
+                <li className="py-2">UPLOAD DOCUMENTS</li>
+              </Link>
+              <Link to="/creator" className="hover:text-gray-300">
+                {' '}
+                <li className="py-2"> CREATORS PAGE</li>
+              </Link>
+              <Link to="/" className="hover:text-gray-300">
+                {' '}
+                <li className="py-2">CONTACT US</li>
+              </Link>
             </ul>
           </div>
         </div>
         <div className="m-8 scale-50 md:scale-100 ">
           <Separator />
         </div>
-        <div className="m-8 text-white font-bold text-xs md:text-sm text-center">
+        <div className="m-8 text-white font-bold text-xs md:text-sm text-center ">
           <h>
             2023 &#169; IIIT EVERYTHING - BY SWOYAM, SANGDIL, PRINCE AND KANISKA
             - ALL RIGHTS RESERVED
