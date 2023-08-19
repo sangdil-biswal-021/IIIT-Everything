@@ -6,7 +6,7 @@ import './index.module.css';
 
 const How = () => {
   return (
-    <div className=" flex max-w-[95vw] mt-32 mb-4 ">
+    <div className=" flex lg:flex-row flex-col max-w-[95vw] mt-32 mb-4  ">
       <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 ">
         <InView triggerOnce>
           {({ inView, ref }) => (
@@ -28,13 +28,13 @@ const How = () => {
           THE WEBSITE
           <div
             // className={styles.animation}
-            className="ml-8"
+            className="ml-8 lg:block hidden"
           >
             <ArrowLong />
           </div>
         </div>
       </div>
-      <div className="w-1/2 h-1/2  text-white font-mono ">
+      <div className="lg:w-1/2 lg:h-1/2 lg:text-left text-center p-4 lg:mb-0 -mb-20  w-[100vw] items-center   text-white font-mono ">
         <p className="w-auto sm:mr-12">
           {' '}
           Lorem ipsum dolor sit amet consectetur. Velit integer turpis ornare

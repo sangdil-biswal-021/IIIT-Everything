@@ -16,11 +16,11 @@ const Navbar = () => {
         <div className="xl:w-[89vw] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center">
-              <Link link to="/trail" className="w-48 ">
+              <Link link to="/" className="w-48 ">
                 <img src={Logo} alt="Example" />
               </Link>
             </div>
-            <div className="flex items-center md:hidden">
+            <div className="flex items-center lg:hidden">
               <button
                 className="text-gray-300 hover:text-white px-3 py-2 z-50 transition-all "
                 style={{
@@ -42,30 +42,30 @@ const Navbar = () => {
                 <FaTimes />
               </button>
             </div>
-            <div className=" hidden  md:flex md:items-center">
+            <div className=" hidden  lg:flex lg:items-center">
               <Link
                 link
                 to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium"
               >
                 HOME
               </Link>
               <Link
                 link
                 to="/browse"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium"
               >
                 BROWSE RESOURCES
               </Link>
               <Link
                 to="/upload"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium"
               >
                 UPLOAD DOCUMENTS
               </Link>
               <a
                 href="/creator"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium"
               >
                 CREATERS PAGE
               </a>
@@ -88,6 +88,7 @@ const Navbar = () => {
           style={{
             left: isOpen ? '0vw' : '10vw',
             opacity: isOpen ? '1' : '0',
+            pointerEvents: isOpen ? '' : 'none',
           }}
         >
           <div className=" p-4 rounded">
@@ -96,7 +97,7 @@ const Navbar = () => {
                 link
                 to="/"
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg  font-medium"
               >
                 HOME
               </Link>
@@ -104,21 +105,21 @@ const Navbar = () => {
                 link
                 to="/browse"
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg  font-medium"
               >
                 BROWSE RESOURCES
               </Link>
               <Link
                 to="/upload"
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg font-medium"
               >
                 UPLOAD DOCUMENTS
               </Link>
               <a
                 href="/creator"
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md  font-medium"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-lg  font-medium"
               >
                 CREATERS PAGE
               </a>

@@ -14,9 +14,9 @@ export default function HomePage() {
   return (
     <>
       <div className="ml-64  ">
-        <SpikeHead className="absolute z-[-1] right-48 top-30 scale-[190%] pointer-events-none opacity-80" />
+        <SpikeHead className="absolute z-[-1] lg:right-48 lg:top-30 top-20 right-24 lg:scale-[190%] scale-[1.4] pointer-events-none opacity-80" />
       </div>
-      <LeftSpine className="absolute" />
+      <LeftSpine className="absolute lg:block hidden pointer-events-none" />
       <Hero />
       <How />
     </>
