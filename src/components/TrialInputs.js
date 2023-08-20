@@ -14,7 +14,7 @@ const SelectInput = ({ label, options, value, onChange }) => (
       {label}
     </label>
     <select
-      className=" bg-[#302c42]/80 focus:outline-none w-[80vw] md:w-full h-[50px] text-white text-[14px] border border-white flex  md:items-center md:justify-center rounded-[40px] text-center"
+      className=" bg-[#302c42]/80 focus:outline-none w-[80vw] md:w-full h-[50px] text-white text-[14px] border border-white flex  md:items-center md:justify-center rounded-[40px] text-center "
       id={label}
       value={value}
       onChange={onChange}
