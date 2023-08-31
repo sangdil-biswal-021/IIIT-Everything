@@ -11,9 +11,9 @@ export default function BrowseResourcePage() {
   return (
     <>
       <div className="ml-64  ">
-        <SpikeHead className="absolute z-[-1] right-40 top-10 scale-[190%] pointer-events-none opacity-30" />
+        <SpikeHead className="absolute z-[-1] sm:right-40 right-10 sm:top-10 top-0 sm:scale-[190%] scale-[1.2] pointer-events-none opacity-30" />
       </div>
-      <LeftSpine className="absolute" />
+      <LeftSpine className="absolute hidden sm:block" />
 
       {/* <div className=""> BrowseResourcePage</div> */}
       <ImageBox HeadTxt={'Browse Documents'} paraTxt={para} />

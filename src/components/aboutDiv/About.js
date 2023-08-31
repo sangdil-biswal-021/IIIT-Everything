@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 import anirudh from '../../images/anirudh.jpeg';
 import img from '../../images/buildingsIIIT.png';
 import kaniskaa from '../../images/kaniskaa.jpeg';
@@ -57,47 +59,107 @@ export default function About() {
     <>
       <div className="flex justify-center w-[90vw] flex-col items-center md:mt-8 ml-[5vw] overflow-x-hidden ">
         <div className="flex flex-col-reverse md:flex-row mb-10 md:mb-0 items-center">
-          <div className="md:w-[50vw] w-[90vw]  flex flex-col md:p-5 md:m-5 md:mt-20 text-mono text-white text-center md:text-left overflow-x-hidden">
-            <text className="font-bold text-[30px]">ABOUT</text>
-            <text className="font-thin text-[30px]">THE CREATORS</text>
-            <text className="text-[14px] mt-2 leading-7">
-              Lorem ipsum dolor sit amet consectetur. Scelerisque enim magna
-              mattis nisl varius. Sed mollis consectetur at at rhoncus mi
-              rhoncus vitae. Eget quis in duis senectus blandit facilisi
-              laoreet. Lorem vel pellentesque ac vel venenatis quis nunc nibh.
-              Neque vel vivamus massa aliquet tortor aliquet sed. Risus lacinia
-              condimentum egestas lectus facilisis. Euismod odio amet sit mi est
-              adipiscing lectus nec. Lacus ornare id facilisi volutpat orci
-              nulla scelerisque curabitur. Sed lorem pellentesque porta dolor
-              sed habitant molestie turpis.
-            </text>
-          </div>
+          <InView triggerOnce>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+                animate={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+                }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="md:w-[50vw] w-[90vw]  flex flex-col md:p-5 md:m-5 md:mt-20 text-mono text-white text-center md:text-left overflow-x-hidden">
+                  <text className="font-bold text-[30px]">ABOUT</text>
+                  <text className="font-thin text-[30px]">THE CREATORS</text>
+                  <text className="text-[14px] mt-2 leading-7">
+                    Lorem ipsum dolor sit amet consectetur. Scelerisque enim
+                    magna mattis nisl varius. Sed mollis consectetur at at
+                    rhoncus mi rhoncus vitae. Eget quis in duis senectus blandit
+                    facilisi laoreet. Lorem vel pellentesque ac vel venenatis
+                    quis nunc nibh. Neque vel vivamus massa aliquet tortor
+                    aliquet sed. Risus lacinia condimentum egestas lectus
+                    facilisis. Euismod odio amet sit mi est adipiscing lectus
+                    nec. Lacus ornare id facilisi volutpat orci nulla
+                    scelerisque curabitur. Sed lorem pellentesque porta dolor
+                    sed habitant molestie turpis.
+                  </text>
+                </div>
+              </motion.div>
+            )}
+          </InView>
           <div className=" lg:scale-[.8] scale-[.6] flex justify-center md:-mt-8 overflow-x-hidden">
-            <Image />
+            <InView triggerOnce>
+              {({ inView, ref }) => (
+                <motion.div
+                  ref={ref}
+                  initial={{ opacity: 0, transform: 'translateX(10%)' }}
+                  animate={{
+                    opacity: inView ? 1 : 0,
+                    transform: inView ? 'translateX(0)' : 'translateX(10%)',
+                  }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Image />
+                </motion.div>
+              )}
+            </InView>
           </div>
         </div>
         <div
           className="flex flex-col font-mono text-white mx-10 bg-no-repeat bg-contain "
           style={{ backgroundImage: `url(${vector})` }}
         >
-          <div className="flex flex-col  w-[80vw] text-[30px]   text-center md:text-left">
-            <text className="md:-mb-[30px]  font-thin">THE</text>
-            <text className="md:flex items-center mr-2 font-bold ">
-              DEVELOPERS
-              <div className="ml-10 md:block hidden">
-                <Arrow />
-              </div>
-            </text>
-          </div>
+          <InView triggerOnce>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, transform: 'translateX(10%)' }}
+                animate={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? 'translateX(0)' : 'translateX(10%)',
+                }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <div className="flex flex-col  w-[80vw] text-[30px]   text-center md:text-left">
+                  <text className="md:-mb-[30px]  font-thin">THE</text>
+                  <text className="md:flex items-center mr-2 font-bold ">
+                    DEVELOPERS
+                    <div className="ml-10 md:block hidden">
+                      <Arrow />
+                    </div>
+                  </text>
+                </div>
+              </motion.div>
+            )}
+          </InView>
+
           <div className="mt-10 grid grid-cols-1 gap-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-            {data.map((e) => (
+            {data.map((e, i) => (
               <>
-                <Developers
-                  image={e.image}
-                  name={e.name}
-                  about={e.about}
-                  linkedin={e.linkedin}
-                />
+                <InView triggerOnce>
+                  {({ inView, ref }) => (
+                    <motion.div
+                      ref={ref}
+                      initial={{ opacity: 0, transform: 'translateX(-20%)' }}
+                      animate={{
+                        opacity: inView ? 1 : 0,
+                        transform: inView
+                          ? 'translateX(0)'
+                          : 'translateX(-20%)',
+                      }}
+                      transition={{ duration: 0.5, delay: 0.2 + i * 0.2 }}
+                    >
+                      <Developers
+                        image={e.image}
+                        name={e.name}
+                        about={e.about}
+                        linkedin={e.linkedin}
+                      />
+                    </motion.div>
+                  )}
+                </InView>
               </>
             ))}
           </div>

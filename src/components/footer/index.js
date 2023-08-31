@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Fbtm } from '../../svg/footerBtmSpine.svg';
 import { ReactComponent as Ftop } from '../../svg/footerTopSpine.svg';
@@ -31,22 +33,78 @@ const Footer = () => {
 
           <div className="w-[40%] ">
             <ul className="text-white  md:text-base text-xs font-bold pointer-events-auto ">
-              <Link to="/browse" className="hover:text-gray-300">
-                {' '}
-                <li className="py-2">BROWSE RESOURCES</li>
-              </Link>
-              <Link to="/upload" className="hover:text-gray-300">
-                {' '}
-                <li className="py-2">UPLOAD DOCUMENTS</li>
-              </Link>
-              <Link to="/creator" className="hover:text-gray-300">
-                {' '}
-                <li className="py-2"> CREATORS PAGE</li>
-              </Link>
-              <Link to="/" className="hover:text-gray-300">
-                {' '}
-                <li className="py-2">CONTACT US</li>
-              </Link>
+              <InView triggerOnce>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+                    animate={{
+                      opacity: inView ? 1 : 0,
+                      transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+                    }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <Link to="/browse" className="hover:text-gray-300">
+                      {' '}
+                      <li className="py-2">BROWSE RESOURCES</li>
+                    </Link>
+                  </motion.div>
+                )}
+              </InView>
+              <InView triggerOnce>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+                    animate={{
+                      opacity: inView ? 1 : 0,
+                      transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+                    }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <Link to="/upload" className="hover:text-gray-300">
+                      {' '}
+                      <li className="py-2">UPLOAD DOCUMENTS</li>
+                    </Link>
+                  </motion.div>
+                )}
+              </InView>
+              <InView triggerOnce>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+                    animate={{
+                      opacity: inView ? 1 : 0,
+                      transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+                    }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
+                    <Link to="/creator" className="hover:text-gray-300">
+                      {' '}
+                      <li className="py-2"> CREATORS PAGE</li>
+                    </Link>
+                  </motion.div>
+                )}
+              </InView>
+              <InView triggerOnce>
+                {({ inView, ref }) => (
+                  <motion.div
+                    ref={ref}
+                    initial={{ opacity: 0, transform: 'translateX(-10%)' }}
+                    animate={{
+                      opacity: inView ? 1 : 0,
+                      transform: inView ? 'translateX(0)' : 'translateX(-10%)',
+                    }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <Link to="/" className="hover:text-gray-300">
+                      {' '}
+                      <li className="py-2">CONTACT US</li>
+                    </Link>
+                  </motion.div>
+                )}
+              </InView>
             </ul>
           </div>
         </div>

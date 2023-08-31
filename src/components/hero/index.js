@@ -1,5 +1,5 @@
 import React from 'react';
-// import Lottie from '../../images/tempLottie.png';
+
 import { motion } from 'framer-motion';
 import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
@@ -21,7 +21,7 @@ const Hero = () => {
 
   return (
     <div className=" flex lg:flex-row flex-col-reverse max-w-[95vw] items-center justify-between overflow-x-hidden ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 ">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -65,13 +65,7 @@ const Hero = () => {
           animate={{ opacity: 1, transform: 'translateX(0)' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* <img
-            className="lg:pb-20 lg:translate-x-40 translate-x-5 overflow-x-hidden pointer-events-none  lg:w-auto lg:h-[80vh] lg:scale-[1.4]  scale-[1.2]  "
-            src={Lottie}
-            alt="img"
-          /> */}
-
-          <div className="lg:pb-20 lg:translate-x-10 translate-x-5 pointer-events-none  lg:w-auto lg:h-[80vh] relative  ">
+          <div className="lg:pb-20 lg:translate-x-10 translate-x-5 pointer-events-none  lg:w-auto lg:h-[80vh] relative lg:overflow-y-hidden  ">
             <Lottie options={defaultOptions} />
 
             <SpikeHead className=" z-[-1] pointer-events-none opacity-80 absolute top-0 lg:top-10 xl:right-48 xl:scale-[1.6] lg:scale-[1.4] sm:w-[80vw] sm:right-40 sm:scale-[1.2] sm:hidden block lg:block lg:w-auto " />
