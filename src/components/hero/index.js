@@ -1,24 +1,26 @@
 import React from 'react';
-import Lottie from '../../images/tempLottie.png';
-// import Lottie from 'react-lottie';
+// import Lottie from '../../images/tempLottie.png';
 import { motion } from 'framer-motion';
+import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
+import animationData from '../../images/animationData.json';
 import { ReactComponent as Arrow } from '../../svg/rightArrow.svg';
+import { ReactComponent as SpikeHead } from '../../svg/spikehead.svg';
 import './index.module.css';
 import styles from './index.module.css';
 
 const Hero = () => {
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: animationData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: 'xMidYMid slice',
-  //   },
-  // };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   return (
-    <div className=" flex lg:flex-row flex-col-reverse max-w-[95vw] items-center justify-between ">
+    <div className=" flex lg:flex-row flex-col-reverse max-w-[95vw] items-center justify-between overflow-x-hidden ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -57,18 +59,23 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="lg:w-1/2 lg:h-1/2 pointer-events-none overflow-x-hidden">
+      <div className="lg:w-1/2 lg:h-1/2 pointer-events-none ">
         <motion.div
           initial={{ opacity: 0, transform: 'translateX(10%)' }}
           animate={{ opacity: 1, transform: 'translateX(0)' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <img
+          {/* <img
             className="lg:pb-20 lg:translate-x-40 translate-x-5 overflow-x-hidden pointer-events-none  lg:w-auto lg:h-[80vh] lg:scale-[1.4]  scale-[1.2]  "
             src={Lottie}
             alt="img"
-          />
-          {/* <Lottie options={defaultOptions} /> */}
+          /> */}
+
+          <div className="lg:pb-20 lg:translate-x-10 translate-x-5 pointer-events-none  lg:w-auto lg:h-[80vh] relative  ">
+            <Lottie options={defaultOptions} />
+
+            <SpikeHead className=" z-[-1] pointer-events-none opacity-80 absolute top-0 lg:top-10 xl:right-48 xl:scale-[1.6] lg:scale-[1.4] sm:w-[80vw] sm:right-40 sm:scale-[1.2] sm:hidden block lg:block lg:w-auto " />
+          </div>
         </motion.div>
       </div>
     </div>
