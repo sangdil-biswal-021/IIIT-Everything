@@ -61,15 +61,7 @@ export default function About() {
             <text className="font-bold text-[30px]">ABOUT</text>
             <text className="font-thin text-[30px]">THE CREATORS</text>
             <text className="text-[14px] mt-2 leading-7">
-              Lorem ipsum dolor sit amet consectetur. Scelerisque enim magna
-              mattis nisl varius. Sed mollis consectetur at at rhoncus mi
-              rhoncus vitae. Eget quis in duis senectus blandit facilisi
-              laoreet. Lorem vel pellentesque ac vel venenatis quis nunc nibh.
-              Neque vel vivamus massa aliquet tortor aliquet sed. Risus lacinia
-              condimentum egestas lectus facilisis. Euismod odio amet sit mi est
-              adipiscing lectus nec. Lacus ornare id facilisi volutpat orci
-              nulla scelerisque curabitur. Sed lorem pellentesque porta dolor
-              sed habitant molestie turpis.
+            Welcome to IIIT Everything, your ultimate resource hub for all things related to studying at our esteemed institution. Our dedicated team of creators has painstakingly compiled a comprehensive collection of study materials, including question papers, recommended books, and insightful notes, all crafted with the aim of aiding both juniors and peers in their academic pursuits. We understand the value of easy access to such documents in enhancing the learning experience, and thus, we are committed to providing a platform that fosters collaborative learning and knowledge sharing. Explore our repository to empower your educational journey and make the most out of your time here at IIIT Bhubaneswar.
             </text>
           </div>
           <div className=" lg:scale-[.8] scale-[.6] flex justify-center md:-mt-8 overflow-x-hidden">
@@ -112,7 +104,7 @@ export default function About() {
               </div>
             </text>
           </div>
-          <div className="mt-10 grid grid-cols-4 gap-4 ">
+          <div className="mt-10 grid md:grid-cols-4 sm:grid-cols-2 gap-4 ">
             {contributors.map((e) => (
               <div className="flex flex-wrap items-center">
                 <div>
