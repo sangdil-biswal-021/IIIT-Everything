@@ -18,7 +18,7 @@ export default function Developers(props) {
       <div className="text-[12px] text-center px-16 md:px-2">{props.about}</div>
       <a href={`${props.linkedin}`}>
         {' '}
-        <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-24 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center">
+        <button className="text-txtPurple  bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-20 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center">
           LinkedIn
         </button>{' '}
       </a>
