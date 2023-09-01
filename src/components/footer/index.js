@@ -98,7 +98,7 @@ const Footer = () => {
                     }}
                     transition={{ duration: 0.5, delay: 0.5 }}
                   >
-                    <Link to="/" className="hover:text-gray-300">
+                    <Link to="/contact" className="hover:text-gray-300">
                       {' '}
                       <li className="py-2">CONTACT US</li>
                     </Link>

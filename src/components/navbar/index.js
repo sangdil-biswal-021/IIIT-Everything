@@ -70,7 +70,7 @@ const Navbar = () => {
                 CREATERS PAGE
               </Link>
               <Link
-                to="/"
+                to="/contact"
                 className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo px-4 sm:px-8 py-4 ml-8 rounded-3xl text-sm font-bold transition duration-900 text-center"
               >
                 CONTACT US

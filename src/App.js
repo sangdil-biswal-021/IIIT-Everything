@@ -9,6 +9,7 @@ import BrowseResourcePage from './pages/BrowseResourcePage';
 import CreatorsPage from './pages/CreatorsPage/CreatorsPage';
 import HomePage from './pages/Homepage';
 import UploadDoc from './pages/UploadDocuments';
+import ContactForm from './components/Form';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,8 @@ function App() {
             <Route path="/upload" element={<UploadDoc />} />
             <Route path="/trial" element={<TrialInput />} />
             <Route path="/creator" element={<CreatorsPage />} />
+            <Route path="/contact" element={<ContactForm />} />
+
           </Routes>
           <Footer />
         </div>
