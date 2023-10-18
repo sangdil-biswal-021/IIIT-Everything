@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.184fae61.css",
+    "main.js": "/static/js/main.fe9e9e76.js",
+    "static/media/radial-rectangle.png": "/static/media/radial-rectangle.0c15c66986df2cc472c7.png",
+    "static/media/about.svg": "/static/media/about.24f9df5a46f063cac13a3b40ca04c1d5.svg",
+    "static/media/buildingsIIIT.png": "/static/media/buildingsIIIT.ac1b87418891f0f6d164.png",
+    "static/media/rectangle-developer.png": "/static/media/rectangle-developer.abc64242c41973063890.png",
+    "static/media/kaniskaa.jpeg": "/static/media/kaniskaa.bbb6aafb5a40c0c3ad3a.jpeg",
+    "static/media/uploadpagelottie.svg": "/static/media/uploadpagelottie.4482530e43156f36cf355af561d1c8b1.svg",
+    "static/media/swoyam.jpeg": "/static/media/swoyam.fe476ce8382257db1942.jpeg",
+    "static/media/sangdil.jpeg": "/static/media/sangdil.cceeae750f9b42025e79.jpeg",
+    "static/media/anirudh.jpeg": "/static/media/anirudh.388e697b6c3e5d983d7f.jpeg",
+    "static/media/uploadIcon.svg": "/static/media/uploadIcon.d269e51d2ca1f6cd1eccfa3bdf1d1d2a.svg",
+    "static/media/spikehead.svg": "/static/media/spikehead.20f1ab2267dc9144ced625a16d931e7f.svg",
+    "static/media/separators.svg": "/static/media/separators.d5a0f81f251f73f23f93b9ef8fcffa4d.svg",
+    "index.html": "/index.html",
+    "static/media/footerTopSpine.svg": "/static/media/footerTopSpine.9310d13dcfe396a1887926531d9e4619.svg",
+    "static/media/footerBtmSpine.svg": "/static/media/footerBtmSpine.f8b32accbc8208f96981be5bc2f2d680.svg",
+    "static/media/leftSpine.svg": "/static/media/leftSpine.27d2ae7ada477e1bf68376858e9868d7.svg",
+    "static/media/partition.svg": "/static/media/partition.12e1fd84fee9e0b52c6a2c341b86b385.svg",
+    "static/media/ArrowLong.svg": "/static/media/ArrowLong.69da84c4c70ab849cd02ee7afec96d6b.svg",
+    "static/media/rightArrow.svg": "/static/media/rightArrow.5b11f612455c91e8caaa15ff60d5a065.svg",
+    "static/media/arrowDown.svg": "/static/media/arrowDown.8ac88dea60caa114fab7d6b8dd2c17cb.svg",
+    "static/media/horizontal.svg": "/static/media/horizontal.a33e96478740d2621b0bb8bab7360b85.svg",
+    "main.184fae61.css.map": "/static/css/main.184fae61.css.map",
+    "main.fe9e9e76.js.map": "/static/js/main.fe9e9e76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.184fae61.css",
+    "static/js/main.fe9e9e76.js"
+  ]
+}

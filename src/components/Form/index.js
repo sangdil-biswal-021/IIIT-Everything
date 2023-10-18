@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,7 +21,10 @@ const ContactForm = () => {
 
     try {
       // Send the form data to Getform
-      await axios.post('https://getform.io/f/3d74e27b-899e-4747-8f8f-720420b8ce64', formData);
+      await axios.post(
+        'https://getform.io/f/3d74e27b-899e-4747-8f8f-720420b8ce64',
+        formData
+      );
 
       // Display a success message or redirect to a thank you page
       console.log('Message sent successfully!');
@@ -46,12 +49,14 @@ const ContactForm = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         onSubmit={handleSubmit}
-        className="bg-transparent p-4 rounded-md shadow-md text-white"
+        className="bg-transparent p-4 rounded-md shadow-md text-white md:px-48"
       >
         <h2 className="text-2xl font-bold mb-4 text-purple">Contact Us</h2>
-        <div className="mb-4 flex flex-wrap -mx-2">
+        <div className="mb-4 flex flex-wrap -mx-2 ">
           <div className="w-1/2 px-2">
-            <label htmlFor="name" className="block mb-2">Name:</label>
+            <label htmlFor="name" className="block mb-2">
+              Name:
+            </label>
             <input
               type="text"
               id="name"
@@ -62,7 +67,9 @@ const ContactForm = () => {
             />
           </div>
           <div className="w-1/2 px-2">
-            <label htmlFor="email" className="block mb-2">Email:</label>
+            <label htmlFor="email" className="block mb-2">
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -74,7 +81,9 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-4 relative">
-          <label htmlFor="message" className="block mb-2">Message:</label>
+          <label htmlFor="message" className="block mb-2">
+            Message:
+          </label>
           <textarea
             id="message"
             name="message"
@@ -84,10 +93,15 @@ const ContactForm = () => {
             rows="4"
           />
         </div>
-        <div className='w-full flex items-center justify-center'> <button type='submit' className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-40 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center">
-          Submit
-        </button></div>
-       
+        <div className="w-full flex items-center justify-center">
+          {' '}
+          <button
+            type="submit"
+            className="text-txtPurple bg-gradient-to-r hover:bg-gradient-to-l from-customPurple to-customIndigo  px-40 py-4  rounded-3xl text-md   font-bold transition duration-900 text-center"
+          >
+            Submit
+          </button>
+        </div>
       </motion.form>
       <ToastContainer
         position="top-right"
