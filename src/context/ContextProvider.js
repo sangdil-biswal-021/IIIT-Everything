@@ -10,7 +10,7 @@ export const ContextProvider = ({ children }) => {
     const fetchData = async ()=>
     {
       const response = await fetch(
-        `https://dbiiit.swoyam.engineer/getsubjects`,
+        `https://iiiteverything.swoyam.in/getsubjects`,
         {
           method: "GET",
           headers: {
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
       const data = await response.json();
       setSubjects(data.unique_sub_values)
 
-      const url = `https://dbiiit.swoyam.engineer/find?sub=${subject}&docType=${documentType}`
+      const url = `https://iiiteverything.swoyam.in/find?sub=${subject}&docType=${documentType}`
       const newResponse= await fetch(
         url,
         {

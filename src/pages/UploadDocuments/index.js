@@ -44,7 +44,7 @@ export default function UploadDoc() {
   const handleEditorSubmit = async () => {
     try {
       const checkResponse = await axios.get(
-        'https://dbiiit.swoyam.engineer/checkadmin',
+        'https://iiiteverything.swoyam.in/checkadmin',
         {
           params: {
             id: adminId,
@@ -62,7 +62,7 @@ export default function UploadDoc() {
         };
 
         const response = await axios.post(
-          'https://dbiiit.swoyam.engineer/addeditor',
+          'https://iiiteverything.swoyam.in/addeditor',
           payload,
           {
             params: {
@@ -144,7 +144,7 @@ export default function UploadDoc() {
       };
 
       const response = await axios.post(
-        'https://dbiiit.swoyam.engineer/addadmin',
+        'https://iiiteverything.swoyam.in/addadmin',
         payload,
         {
           params: {
@@ -174,7 +174,7 @@ export default function UploadDoc() {
   const handleFileUploadVerify = async () => {
     try {
       const checkResponse = await axios.get(
-        'https://dbiiit.swoyam.engineer/checkeditor',
+        'https://iiiteverything.swoyam.in/checkeditor',
         {
           params: {
             id: editorId,
@@ -195,7 +195,7 @@ export default function UploadDoc() {
         };
 
         const response = await axios.post(
-          'https://dbiiit.swoyam.engineer/upload',
+          'https://iiiteverything.swoyam.in/upload',
           formData,
           {
             params: queryParams,
